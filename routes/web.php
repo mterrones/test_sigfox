@@ -17,6 +17,7 @@ Route::get('/', function () {
 
 Route::post('/test', function () {
 
+    \Log::info(request()->all());
     return response()->json(['success' => true, 'data' => request()->all()]);
 
 });
